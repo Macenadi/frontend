@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactivity</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; line-height: 1.6; }
+        section { margin-bottom: 40px; padding: 20px; background: #f9f9f9; border-radius: 8px;}
+        input { padding: 8px; font-size: 16px; }
+        button { padding: 8px 16px; font-size: 16px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px;}
+        button:hover { background: #00b30f; }
+        
+        /* Error class for validation */
+        .input-error { border: 2px solid red; background-color: #ffe6e6; }
+    </style>
+    <script defer src="script-7.js"></script>
+</head>
+<body>
+
+    <h1>Interactivity and Input</h1>
+
+    <!-- SECTION 1: Simple Button -->
+    <section>
+        <h2>1. Event Handlers</h2>
+        <p id="status-text">Waiting for user...</p>
+        <button onclick="updateStatus()">Click Me</button>
+    </section>
+
+    <!-- SECTION 2: Text Input -->
+    <section>
+        <h2>2. Text Input</h2>
+        <input type="text" id="user-name" placeholder="Enter your name">
+        <button onclick="greetUser()">Say Hello</button>
+        <p id="greeting-msg"></p>
+    </section>
+
+    <!-- SECTION 3: Number Input -->
+<section>
+    <h2>3. Age Checker</h2>
+    <input type="number" id="user-age" placeholder="Enter age">
+    <button onclick="checkAge()">Check Age</button>
+    <p id="age-msg"></p>
+</section>
+
+
+
+</body>
+</html>
