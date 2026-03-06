@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script-1.js"></script>
+</head>
+<body>
+    
+    <h1 id = "bigHeading">Heading</h1>
+
+    <p id = "paraText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed architecto temporibus quam corrupti porro doloribus incidunt. Doloremque aliquam in corrupti, nobis officia odio consequuntur dolores est quisquam aperiam, officiis fugiat?</p>
+
+    <button ondblclick="updatebigHeading()">Update h1</button>
+    <button onmouseover="updatePara()">Update text</button>
+
+    <p><input type="text" id="firstName" placeholder="First Name"></p>
+    <p><input type="text" id="lastName" placeholder="Last Name"></p>
+
+    <button onclick="processForm()">Submit Form</button>
+
+    <script>
+        console.log("Hello, World!");
+
+        // Declaring (creating and naming) variables in JavaScript
+        let userFirstName; // Declares a variable named userFirstName
+        let taxRate;       // Declares a variable named taxRate
+        
+        let firstName = "Nadia";
+        let lastName = "Macedo";
+        let favSinger = "Anyone";
+
+        console.log(`My name is ${firstName} ${lastName} and my favorite singer is ${favSinger}`)
+
+        
+
+        function doSomething() 
+        {
+            console.log("Hello from the function");
+        }
+
+        doSomething();
+        
+
+        function addTwoNumbers(num1, num2)
+        {
+            let numTotal = num1 + num2;
+            console.log(`Total is: ${numTotal}`);
+            return numTotal;
+        }
+
+        let varResult = addTwoNumbers(4,6);
+        console.log(`Total is: ${varResult}`);
+
+
+        function updatebigHeading ()
+        {
+        let bigHeading = document.getElementById("bigHeading");
+        bigHeading.style.color = "red";
+        bigHeading.style.backgroundColor = "Blue";
+        bigHeading.innerText = "JS has changed me"
+        bigHeading.innerHTML = "JS has changed me <i> italics </i>";
+        }
+
+        function updatePara() 
+        {
+            let paraText = document.getElementById("paraText");
+            paraText.innerText = "New text here";
+        }
+
+        function processForm()
+        {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const fullName = `${firstName} ${lastName}`;
+            console.log(`Thank you: ${fullName}`);
+        }
+
+    </script>
+
+</body>
+</html>
